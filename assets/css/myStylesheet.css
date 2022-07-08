@@ -1,0 +1,40 @@
+#navbar{
+  position: absolute;
+  margin: 0% 0% 10% 0%;
+  top: -10%;
+  left: 0%;
+  width: 100%;
+  height: 10%;
+}
+
+#navbarList{
+  list-style-type: none;
+  overflow: hidden;
+}
+
+#listItem{
+  display: block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  float: right;
+}
+
+#popupContainer{
+  background-color: #333;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+}
+
+#contentIframe{
+  position: absolute;
+  background-color: #333;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+}

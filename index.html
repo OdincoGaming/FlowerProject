@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" style="overflow: hidden;background: #1c2336;">
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="./assets/css/myStylesheet.css">   
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, target-densityDpi=device-dpi user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>FP_Proto</title>  
+    </head>
+    <script>
+        function InstantiatePage(urlToLoad){
+            const game = document.getElementById('unityPlayer');
+            const rect = game.getBoundingClientRect();
+            //const contentContainer = document.getElementById('popupContainer');
+
+            // div creation
+            //==================================
+            var div = document.createElement("div");
+            div.id = "popupContainer";
+
+            // navbar creation
+            //==================================
+            var navbar = document.createElement("div");
+            navbar.id = "navbar";
+
+            // navbar list creation
+            //==================================
+            var itemList = document.createElement("ul");
+            itemList.id = 'navbarList';
+
+            // navbar list item creation
+            //==================================
+            var item1 = document.createElement("li");
+            item1.id = 'listItem';
+            var item2 = document.createElement("li");
+            item2.id = 'listItem';
+
+            // external content close button creation
+            //==================================
+            var button = document.createElement("input");
+            button.type = "button";
+            button.value = "X";
+            button.onclick = function () {
+                game.parentNode.removeChild(game.parentNode.lastChild);
+            };
+            item1.appendChild(button);
+
+            // external content new tab button
+            //==================================
+            var tabButton = document.createElement("input");
+            tabButton.type = "button";
+            tabButton.value = "Open in new tab.";
+            tabButton.onclick = function () {
+                window.open(urlToLoad, "_blank");
+            };
+            item2.appendChild(tabButton);
+
+            // append li to ul to navbar
+            //==================================
+            itemList.append(item1);
+            itemList.append(item2);
+            navbar.append(itemList);
+            div.append(navbar)
+
+            // external website display creation
+            //==================================
+            const iframe = document.createElement('iframe');
+            iframe.id = 'contentIframe';
+            iframe.src = urlToLoad;
+            div.appendChild(iframe);
+
+            // add it to canvas parent node.
+            //game.parentNode.appendChild(div);
+            document.body.appendChild(div);
+        }
+    </script>
+    <body>
+        <iframe  id="unityPlayer" src="./unity.html" style="border:0px #000000 none;position: fixed;left: 0;right: 0;bottom: 0;top: 0;width: 100%;height: 100%;" name="unityPlayer" scrolling="no" frameborder="0"></iframe>
+    </body>
+</html>
