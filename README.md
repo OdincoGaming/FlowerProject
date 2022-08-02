@@ -1,10 +1,10 @@
 # FlowerProject
 A protoype web app inspired by a TED Talk about the cities of the future; filled with plants.
 
-The idea is to encourage people to have more house plants by allowing them to interact with them online in a fun interactive setting,
-and then making it so easy for them to commit to the purchase of a new plant they dont even have to open up a new tab!
+The idea is to encourage people to have more house plants by allowing them to interact with them online in a fun interactive setting.
 
 Currently I have not reached out to any plant suppliers to see if they want the free advertising; so the one active plant kiosk goes to a youtube video that is an excerpt of some dialogue from Dark Souls 3.
+More kiosks will be activated with more plants as I get more 3D models and textures, art donations are welcome and artists who donate can have a custom billboard put in game as a show of appreciation.
 
 Click Here To Play: https://odincogaming.github.io/FlowerProject/
 ===============================================
