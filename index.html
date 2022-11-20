@@ -6,7 +6,30 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, target-densityDpi=device-dpi user-scalable=no">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>FP_Proto</title>  
+        <title>FP_Proto</title>
+        <style>
+            #unityPlayer{
+                border:0px #000000 none;
+                position: fixed;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+            }
+            @media (max-width: 550px)
+            {
+                #unityPlayer{
+                border:0px #000000 none;
+                position: fixed;
+                left: 0;
+                top: 10%;
+                width: 100%;
+                height: 90%;
+            }
+            }
+        </style>  
     </head>
     <script>
 
@@ -72,11 +95,22 @@
             div.appendChild(iframe);
 
             // add it to canvas parent node.
-            //game.parentNode.appendChild(div);
             document.body.appendChild(div);
+        }
+
+        function MobileFullScreenButton(){
+            
+        }
+
+        function GoFullScreen(){
+            document.getElementById('unityPlayer').contentWindow.myGameInstance.SetFullscreen(1);
         }
     </script>
     <body>
-        <iframe  id="unityPlayer" src="./unity.html" style="border:0px #000000 none;position: fixed;left: 0;right: 0;bottom: 0;top: 0;width: 100%;height: 100%;" name="unityPlayer" scrolling="no" frameborder="0"></iframe>
+        <div class="info" id="info">
+            <p><a href="#" onclick="GoFullScreen()">Click here</a> to go fullscreen.</p>
+        </div>
+        <!--<iframe  id="unityPlayer" src="./unity.html" style="border:0px #000000 none;position: fixed;left: 0;right: 0;bottom: 0;top: 0;width: 100%;height: 100%;" name="unityPlayer" scrolling="no" frameborder="0"></iframe>-->
+        <iframe  id="unityPlayer" src="./unity.html" name="unityPlayer" scrolling="no" frameborder="0"></iframe>
     </body>
 </html>
