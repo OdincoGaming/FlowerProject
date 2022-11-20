@@ -98,10 +98,6 @@
             document.body.appendChild(div);
         }
 
-        function MobileFullScreenButton(){
-            
-        }
-
         function GoFullScreen(){
             document.getElementById('unityPlayer').contentWindow.myGameInstance.SetFullscreen(1);
         }
@@ -110,7 +106,7 @@
         <div class="info" id="info">
             <p><a href="#" onclick="GoFullScreen()">Click here</a> to go fullscreen.</p>
         </div>
-        <!--<iframe  id="unityPlayer" src="./unity.html" style="border:0px #000000 none;position: fixed;left: 0;right: 0;bottom: 0;top: 0;width: 100%;height: 100%;" name="unityPlayer" scrolling="no" frameborder="0"></iframe>-->
+        
         <iframe  id="unityPlayer" src="./unity.html" name="unityPlayer" scrolling="no" frameborder="0"></iframe>
     </body>
 </html>
